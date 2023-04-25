@@ -64,9 +64,9 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
+        title: "DBot Docs",
         logo: {
-          alt: "My Site Logo",
+          alt: "DBot Logo",
           src: "img/logo.svg",
         },
         items: [
@@ -87,8 +87,13 @@ const config = {
           { to: "/blog", label: "Blog", position: "left" },
 
           {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
+            href: "https://github.com/redmarble",
+            label: "Components Git",
+            position: "right",
+          },
+          {
+            href: "https://github.com/JamieWalkerSTF/dbotdocs",
+            label: "Docs Git",
             position: "right",
           },
         ],
@@ -106,19 +111,23 @@ const config = {
             ],
           },
           {
-            title: "Community",
+            title: "Development Staging",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "Commercial (Dev)",
+                href: "https://dbotcommercial-dev.azurewebsites.net/",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: "Downstream (Dev)",
+                href: "https://dev.downstream.dbot.app/",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "IPV Pulse (Dev)",
+                href: "https://dbotvaluation-dev.azurewebsites.net/",
+              },
+              {
+                label: "Approvals (Dev)",
+                href: "https://dbotapprovals-dev.azurewebsites.net/",
               },
             ],
           },
@@ -136,7 +145,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

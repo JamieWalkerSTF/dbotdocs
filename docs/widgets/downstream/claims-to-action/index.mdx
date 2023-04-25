@@ -1,0 +1,133 @@
+---
+sidebar_label: "Claims to Action"
+description: Create a doc page with rich content.
+sidebar_position: 1
+---
+
+# Widget: Claims to action
+
+The **Claims to Action** widget is a **downstream** widget that allows the user to view and manage their claims to action.
+
+It can be used on a **Portfolio**, **Project** and **Subcontractor** view.
+
+![Widget Example](./widget-claims-to-action.png)
+
+## Overview
+
+| Property                 | Values                                                       |
+| ------------------------ | ------------------------------------------------------------ |
+| **Default Name**         | claims-to-action                                             |
+| **Tags**                 | Downstream, Claims, To Action, Subcontractor, Payment Claims |
+| **Available Dashboards** | My Control, Commercial, Downstream                           |
+| **Available Contexts**   | Portfolio View, Subcontractor View, Project View             |
+
+## Design
+
+The widget consists of a simple data table that allows the user to see the most urgent claims to action across their portfolio.
+
+The table is sorted by ascending **PS Due days**. _This means that the most urgent claims to action will be at the top of the table._
+
+The table consists of the following columns:
+
+| Name                          | Example                                     | Cell Type    | Description                                           |
+| ----------------------------- | ------------------------------------------- | ------------ | ----------------------------------------------------- |
+| **Project**                   | ABC                                         | String       | The project name abbreviation.                        |
+| **Subcontractor**             | Example Pty Ltd                             | String       | The subcontractor name.                               |
+| **Date Submitted**            | 1 Jan 2023                                  | DateTime     | The date the claim was submitted.                     |
+| **PS #**                      | 8                                           | Number       | The payment schedule number.                          |
+| **Claim No**                  | 001                                         | String       | The claim number.                                     |
+| **PS Due Days**               | -10 days, Today, 5 days                     | String       | The number of days until the payment schedule is due. |
+| **Cumulative Claimed Amount** | 3,320                                       | Currancy     | The cumulative amount claimed.                        |
+| **Status**                    | `Not Recieved` `Ready for Issue` `Approved` | Status Badge | The status of the claim.                              |
+
+### Behavior
+
+Clicking on anywhere on any row will take the user directly to that payment claim details screen.
+
+### User Customizations
+
+:::note
+
+This widget has no user Customizations.
+
+:::
+
+## Developer Usage
+
+Import the Claims to Action component from dbotdesign at `docs/hello.md`:
+
+```jsx
+import TabItem from "@theme/TabItem";
+```
+
+Impliment the widget inside the dashboard by loading the data:
+
+```jsx
+<xWidget-claimsToAction name="example" anotherProp="test" />
+```
+
+### Customization
+
+The widget can be adjusted by the developer to suit the needs of the project. The following properties can be adjusted:
+
+#### Props
+
+The component accepts the following props:
+
+| Name              | Type      | Value      | Description                                |
+| ----------------- | --------- | ---------- | ------------------------------------------ |
+| `input`           | _string_  | -          | Bind the input value.                      |
+| `name`            | _string_  | -          | Set a unique select input name.            |
+| `value`           | `[]`      | `[]`       | An array of values.                        |
+| `allowDuplicates` | _boolean_ | `<button>` | When enabled, allows for duplicate values. |
+| `minlength`       | _number_  | -1         | Set the minimum character length.          |
+
+#### Events
+
+The component emits the following events:
+
+| Name          | Type         | Element    | Response                                           | Description                   |
+| ------------- | ------------ | ---------- | -------------------------------------------------- | ----------------------------- |
+| `on:add`      | _dispatched_ | -          | event: Event, chipIndex: number, chipValue: string | Fires when widget is added.   |
+| `on:remove`   | _dispatched_ | -          | event: Event, chipIndex: number, chipValue: string | Fires when widget is removed. |
+| `on:input`    | _dispatched_ | `<input>`  | test2                                              | -                             |
+| `on:click`    | _dispatched_ | `<button>` | test2                                              | -                             |
+| `on:keypress` | _dispatched_ | `<button>` | test2                                              | -                             |
+
+<div
+  style={{
+    marginBottom: "120px",
+  }}></div>
+
+## Data Filtering
+
+## Widget Responsiveness
+
+## Additional Settings
+
+## Data
+
+This is my **first Docusaurus document**!
+
+````
+
+It is also possible to create your sidebar explicitly in `sidebars.js`:
+
+```js title="sidebars.js"
+module.exports = {
+  tutorialSidebar: [
+    "intro",
+    // highlight-next-line
+    "hello",
+    {
+      type: "category",
+      label: "Tutorial",
+      items: ["tutorial-basics/create-a-document"],
+    },
+  ],
+};
+````
+
+## The Code
+
+[View the component code on GitHub](https://github.com/redmarble)
