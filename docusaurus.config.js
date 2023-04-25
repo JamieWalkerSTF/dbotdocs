@@ -72,9 +72,9 @@ const config = {
         items: [
           {
             type: "docSidebar",
-            sidebarId: "tutorialSidebar",
+            sidebarId: "designSidebar",
             position: "left",
-            label: "Tutorial",
+            label: "UI & Design",
           },
 
           {
@@ -82,6 +82,13 @@ const config = {
             sidebarId: "widgetSidebar",
             position: "left",
             label: "Widgets",
+          },
+
+          {
+            type: "docSidebar",
+            sidebarId: "modulesSidebar",
+            position: "left",
+            label: "Modules",
           },
 
           { to: "/blog", label: "Release Notes", position: "left" },
