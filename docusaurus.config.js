@@ -11,7 +11,7 @@ const config = {
   favicon: "img/favicon.png",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://dbotdocs.vercel.app",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -84,7 +84,7 @@ const config = {
             label: "Widgets",
           },
 
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/blog", label: "Release Notes", position: "left" },
 
           {
             href: "https://github.com/redmarble",
